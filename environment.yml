@@ -1,0 +1,41 @@
+#A template of the conda environment
+#The template contains commonly used packages
+#For details: https://github.com/NHSDigital/rap-community-of-practice/blob/main/python/virtual-environments.md
+name: ncmp
+channels:
+  # via conda
+  # - conda-forge
+  - defaults
+dependencies:
+  - python = 3.7.6
+  - pip = 21.2.4
+
+  # Core data manipulation modules
+  - numpy = 1.21.5
+  - pandas = 1.3.5
+
+  # Excel output
+  - xlwings = 0.24.9
+  - openpyxl = 3.0.09
+
+  # Testing
+  - pytest = 6.2.5
+
+  # SQL 
+  - sqlalchemy = 1.4.32
+  - pyodbc = 4.0.32
+
+  # other
+  - nbformat #=5.1.3
+
+  # Enable using conda environments with spyder 4.2.0
+  # For spyder 5 need spyder-kernels 2.*
+  # For more info: http://docs.spyder-ide.org/current/troubleshooting/common-illnesses.html#spyder-kernels-not-installed-incompatible
+  - spyder-kernels = 1.10.0
+
+ # PIP packages
+  - pip:
+    # Reading SPSS files
+    - pyreadstat==1.1.4
+    # Pretty HTML output
+    - pytest-html==3.1.1
